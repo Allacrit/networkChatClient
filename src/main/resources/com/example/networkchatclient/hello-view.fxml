@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.networkchatclient.controllers.ChatController">
+   <bottom>
+      <SplitPane dividerPositions="0.7842809364548495" prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="466.0">
+               <children>
+                  <TextField fx:id="inputMessage" layoutX="153.0" layoutY="14.0" promptText="Введите сообщение" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="sendButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" text="Отправить" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.2792642140468227" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.10465116279069768" layoutX="30.0" layoutY="-41.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Label fx:id="nickNameTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="17.0" text="Ваш ник" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <ListView fx:id="userList" layoutX="-31.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.10271317829457365" layoutX="115.0" layoutY="-30.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="105.0" layoutY="6.0" text="Супер Чат" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="MS Outlook" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextArea fx:id="chatListHistory" layoutX="111.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
